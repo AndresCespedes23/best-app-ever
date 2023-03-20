@@ -11,4 +11,4 @@ Desde el lado del usuario comercial se debe gestionar un carro de compras y su u
 | Name  | Mail | Github
 | :-----: | :-----: | :-----: |
 | Andrés Céspedes | andres.pablo.cespedes@gmail.com | [@AndresCespedes23](https://github.com/AndresCespedes23)
-| Juan Cruz Navone | juancruznavone@gmail.com | 
+| Juan Cruz Navone | juancruznavone@gmail.com | [@Juanchizi](https://github.com/Juanchizi)
