@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const usuarios = [
   {
     id: "1",
@@ -43,6 +44,8 @@ const usuarios = [
   },
 ];
 
-export default function handler(req, res) {
-  res.status(200).json(usuarios);
-}
+export default (_req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "application/json");
+  res.send(JSON.stringify(usuarios));
+};
