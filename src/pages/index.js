@@ -1,7 +1,4 @@
-import StoreNavbar from "../Components/StoreNavbar";
 import Head from "next/head";
-import grocery from "../../public/images/store/compras.png";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,7 +11,6 @@ export default function Home() {
       </Head>
       <main>
         <h1>Best App Ever Developed</h1>
-        <StoreNavbar />
       </main>
     </>
   );
