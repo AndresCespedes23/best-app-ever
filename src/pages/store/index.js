@@ -4,6 +4,7 @@ import delivery from "../../../public/images/store/entrega.png";
 import grocery from "../../../public/images/store/compras.png";
 import StoreNavbar from "@/Components/StoreNavbar";
 import styles from "../../styles/store.module.css";
+import Link from "next/link";
 
 export default function Store() {
   return (
@@ -17,14 +18,14 @@ export default function Store() {
       <div>
         <h1>Store</h1>
         <div className={styles.storeBtns}>
-          <div className={styles.delivery}>
+          <Link className={styles.delivery} href="store/delivery">
             <Image height={64} width={64} src={delivery} alt="delivery" />
             <h2>Envíos</h2>
-          </div>
-          <div className={styles.grocery}>
+          </Link>
+          <Link className={styles.grocery} href="/store/grocery">
             <Image height={64} width={64} src={grocery} alt="grocery" />
             <h2>Productos</h2>
-          </div>
+          </Link>
         </div>
         <StoreNavbar />
       </div>
