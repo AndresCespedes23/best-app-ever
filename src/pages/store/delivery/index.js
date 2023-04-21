@@ -1,5 +1,10 @@
-import StoreNavbar from "@/Components/StoreNavbar";
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import residence from "../../../../public/images/store/delivery/domicilio.png";
+import subsidiary from "../../../../public/images/store/delivery/sucursal.png";
+import StoreNavbar from "@/Components/StoreNavbar";
+import styles from "../../../styles/delivery.module.css";
 
 export default function Delivery() {
   return (
@@ -11,6 +16,16 @@ export default function Delivery() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Delivery</h1>
+      <div className={styles.deliveryBtns}>
+        <Link className={styles.residence} href="/store/delivery/residence">
+          <Image height={64} width={64} src={residence} alt="residence" />
+          <h2>Domicilio</h2>
+        </Link>
+        <Link className={styles.subsidiary} href="/store/delivery/subsidiary">
+          <Image height={64} width={64} src={subsidiary} alt="subsidiary" />
+          <h2>Sucursal</h2>
+        </Link>
+      </div>
       <StoreNavbar />
     </>
   );

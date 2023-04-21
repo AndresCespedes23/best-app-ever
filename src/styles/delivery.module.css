@@ -1,0 +1,19 @@
+.deliveryBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.residence, .subsidiary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #c4c0c0;
+    border-radius: 9px;
+    box-shadow: 2px 3px #00000041;
+    color: #000;
+    text-decoration: none;
+}

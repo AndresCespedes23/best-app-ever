@@ -15,20 +15,19 @@ export default function Store() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        <h1>Store</h1>
-        <div className={styles.storeBtns}>
-          <Link className={styles.delivery} href="store/delivery">
-            <Image height={64} width={64} src={delivery} alt="delivery" />
-            <h2>Envíos</h2>
-          </Link>
-          <Link className={styles.grocery} href="/store/grocery">
-            <Image height={64} width={64} src={grocery} alt="grocery" />
-            <h2>Productos</h2>
-          </Link>
-        </div>
-        <StoreNavbar />
+
+      <h1>Store</h1>
+      <div className={styles.storeBtns}>
+        <Link className={styles.delivery} href="store/delivery">
+          <Image height={64} width={64} src={delivery} alt="delivery" />
+          <h2>Envíos</h2>
+        </Link>
+        <Link className={styles.grocery} href="/store/grocery">
+          <Image height={64} width={64} src={grocery} alt="grocery" />
+          <h2>Productos</h2>
+        </Link>
       </div>
+      <StoreNavbar />
     </>
   );
 }
