@@ -9,18 +9,18 @@ export default function StoreNavbar() {
     <div>
       <nav className={styles.navbar}>
         <ul className={styles.navbarIcons}>
-          <Link href="/store/grocery">
-            <Image height={40} width={40} src={grocery} alt="grocery" />
+          <Link href="/almacen/productos">
+            <Image height={40} width={40} src={grocery} alt="productos" />
           </Link>
         </ul>
         <ul className={styles.navbarIcons}>
-          <Link href="/store">
+          <Link href="/almacen">
             <Image height={50} width={50} src={home} alt="home" />
           </Link>
         </ul>
         <ul className={styles.navbarIcons}>
-          <Link href="/store/delivery">
-            <Image height={40} width={40} src={delivery} alt="delivery" />
+          <Link href="/almacen/envios">
+            <Image height={40} width={40} src={delivery} alt="envios" />
           </Link>
         </ul>
       </nav>
