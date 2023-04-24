@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import residence from "../../../../public/images/store/delivery/domicilio.png";
-import subsidiary from "../../../../public/images/store/delivery/sucursal.png";
-import StoreNavbar from "@/Components/StoreNavbar";
 import styles from "../../../styles/delivery.module.css";
+import domicilio from "../../../../public/images/store/delivery/domicilio.png";
+import sucursal from "../../../../public/images/store/delivery/sucursal.png";
 
 export default function Delivery() {
   return (
@@ -15,18 +14,17 @@ export default function Delivery() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Envíos</h1>
+      <h1 className={styles.title}>Envíos</h1>
       <div className={styles.deliveryBtns}>
-        <Link className={styles.residence} href="/almacen/envios/domicilio">
-          <Image height={64} width={64} src={residence} alt="domicilio" />
+        <Link className={styles.residenceBtn} href="/almacen/envios/domicilio">
+          <Image height={64} width={64} src={domicilio} alt="domicilio" />
           <h2>Domicilio</h2>
         </Link>
-        <Link className={styles.subsidiary} href="/almacen/envios/sucursal">
-          <Image height={64} width={64} src={subsidiary} alt="sucursal" />
+        <Link className={styles.subsidiaryBtn} href="/almacen/envios/sucursal">
+          <Image height={64} width={64} src={sucursal} alt="sucursal" />
           <h2>Sucursal</h2>
         </Link>
       </div>
-      <StoreNavbar />
     </>
   );
 }

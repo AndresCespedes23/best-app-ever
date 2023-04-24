@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import delivery from "../../../public/images/store/entrega.png";
 import grocery from "../../../public/images/store/compras.png";
-import StoreNavbar from "@/Components/StoreNavbar";
 import styles from "../../styles/store.module.css";
 import Link from "next/link";
 
@@ -16,9 +15,9 @@ export default function Store() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Almacen</h1>
+      <h1 className={styles.title}>Almacen</h1>
       <div className={styles.storeBtns}>
-        <Link className={styles.delivery} href="almacen/envios">
+        <Link className={styles.delivery} href="/almacen/envios">
           <Image height={64} width={64} src={delivery} alt="envios" />
           <h2>Envíos</h2>
         </Link>
@@ -27,7 +26,6 @@ export default function Store() {
           <h2>Productos</h2>
         </Link>
       </div>
-      <StoreNavbar />
     </>
   );
 }

@@ -1,5 +1,8 @@
-import StoreNavbar from "@/Components/StoreNavbar";
 import Head from "next/head";
+import Image from "next/image";
+import ReturnArrow from "@/Components/ReturnArrow";
+import domicilio from "../../../../../public/images/store/delivery/domicilio.png";
+import styles from "../../../../styles/residence.module.css";
 
 export default function Residence() {
   return (
@@ -10,8 +13,33 @@ export default function Residence() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Domicilio</h1>
-      <StoreNavbar />
+      <ReturnArrow />
+
+      <figure className={styles.residence}>
+        <Image height={64} width={64} src={domicilio} alt="domicilio" />
+        <figcaption>Domicilio</figcaption>
+      </figure>
+
+      <div className={styles.deliveryInfo}>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className={styles.tableContent}>Body content 1</td>
+              <td className={styles.tableContent}>Body content 2</td>
+              <td className={styles.tableContent}>Body content 3</td>
+              <td className={styles.tableContent}>Body content 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }

@@ -1,5 +1,5 @@
-import StoreNavbar from "@/Components/StoreNavbar";
 import Head from "next/head";
+import styles from "../../../styles/productos.module.css";
 
 export default function Grocery() {
   return (
@@ -10,8 +10,7 @@ export default function Grocery() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>productos</h1>
-      <StoreNavbar />
+      <h1 className={styles.productos}>productos</h1>
     </>
   );
 }
