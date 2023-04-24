@@ -4,9 +4,11 @@ import Image from "next/image";
 import styles from "../../styles/return-arrow.module.css";
 export default function ReturnArrow() {
   return (
-    <Link className={styles.arrow} href="/almacen/envios">
+    <div className={styles.arrow}>
       <Image height={25} width={25} src={arrow} alt="volver" />
-      <p className={styles.arrowText}>Volver</p>
-    </Link>
+      <Link className={styles.arrowText} href="/almacen/envios">
+        <p>Volver</p>
+      </Link>
+    </div>
   );
 }
