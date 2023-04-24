@@ -13,7 +13,7 @@ export default function Subsidiary() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ReturnArrow />
+      <ReturnArrow href="/almacen/envios" />
       <figure className={styles.sucursal}>
         <Image height={64} width={64} src={sucursal} alt="sucursal" />
         <figcaption>Sucursal</figcaption>
