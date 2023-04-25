@@ -12,28 +12,30 @@ const usuarios = [
     },
     envios: [
       {
-        id_envio: "00008",
+        id_envio: "8",
         fecha: "24-04-2023",
         items: [
           {
             id_producto: "123",
             nombre_producto: "Johnny Walker - Black Label",
-            precio: "50",
-            cantidad: "5",
+            precio: 5000,
+            cantidad: 5,
           },
           {
             id_producto: "123",
             nombre_producto: "Coca Cola",
-            precio: "60",
-            cantidad: "4",
+            precio: 600,
+            cantidad: 4,
           },
         ],
-        total: "110",
+        tipo_envio: "",
+        rango_horario: "",
+        total: 27400,
       },
     ],
-    contraseña: "123456789",
+    contraseña: "goku123",
     mail: "juanjo@gmail.com",
-    telefono: "123456789",
+    telefono: 10303456,
     isActive: true,
   },
 ];
