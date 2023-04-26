@@ -3,7 +3,7 @@ const almacen = [
   {
     id: "1",
     calle: "",
-    SKU: "",
+    SKU: "56464565",
     cantidad: {
       stock: 700,
       productos: [
