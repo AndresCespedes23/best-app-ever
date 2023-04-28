@@ -34,10 +34,10 @@ export default function Residence() {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Fecha</th>
-              <th>Estado</th>
-              <th>Acciones</th>
+              <th className={styles.tableHeader}>#</th>
+              <th className={styles.tableHeader}>Fecha</th>
+              <th className={styles.tableHeader}>Estado</th>
+              <th className={styles.tableHeader}>Acciones</th>
             </tr>
           </thead>
 
@@ -47,15 +47,13 @@ export default function Residence() {
                 {user.envios?.map((envio, index) => {
                   if (envio.tipo_envio === ENVIOS_STATUS.DOMICILIO)
                     return (
-                      <tr key={index}>
-                        <td className={styles.tableContent}>
-                          {envio.id_envio}
-                        </td>
-                        <td className={styles.tableContent}>{envio.fecha}</td>
-                        <td className={styles.tableContent}>
+                      <tr className={styles.tableRow} key={index}>
+                        <td className={styles.tableData}>{envio.id_envio}</td>
+                        <td className={styles.tableData}>{envio.fecha}</td>
+                        <td className={styles.tableData}>
                           {envio.estado_envio}
                         </td>
-                        <td className={styles.tableContent}></td>
+                        <td className={styles.tableData}></td>
                       </tr>
                     );
                 })}

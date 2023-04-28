@@ -16,10 +16,18 @@
 }
 .table{
     border-collapse: separate;
-    border-spacing: 1rem 2rem;
-    border: 1px solid #c4c0c0;
-    border-radius: 9px;
+    width: 100%;
 }
-.tableContent {
-    padding-left: 1vw;
-    }
+.tableHeader {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #a0a0a0;
+    color: white;
+}
+.tableHeader, .tableData {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+.tableRow:hover {background-color: #ddd;}
+

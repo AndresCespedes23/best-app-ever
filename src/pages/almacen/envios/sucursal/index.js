@@ -30,12 +30,12 @@ export default function Subsidiary() {
       </figure>
       <div className={styles.deliveryInfo}>
         <table className={styles.table}>
-          <thead className={styles.tableHeader}>
+          <thead>
             <tr>
-              <th>#</th>
-              <th>Fecha</th>
-              <th>Estado</th>
-              <th>Acciones</th>
+              <th className={styles.tableHeader}>#</th>
+              <th className={styles.tableHeader}>Fecha</th>
+              <th className={styles.tableHeader}>Estado</th>
+              <th className={styles.tableHeader}>Acciones</th>
             </tr>
           </thead>
 
@@ -45,15 +45,13 @@ export default function Subsidiary() {
                 {user.envios?.map((envio, index) => {
                   if (envio.tipo_envio === ENVIOS_STATUS.SUCURSAL)
                     return (
-                      <tr key={index}>
-                        <td className={styles.tableContent}>
-                          {envio.id_envio}
-                        </td>
-                        <td className={styles.tableContent}>{envio.fecha}</td>
-                        <td className={styles.tableContent}>
+                      <tr className={styles.tableRow} key={index}>
+                        <td className={styles.tableData}>{envio.id_envio}</td>
+                        <td className={styles.tableData}>{envio.fecha}</td>
+                        <td className={styles.tableData}>
                           {envio.estado_envio}
                         </td>
-                        <td className={styles.tableContent}></td>
+                        <td className={styles.tableData}></td>
                       </tr>
                     );
                 })}
