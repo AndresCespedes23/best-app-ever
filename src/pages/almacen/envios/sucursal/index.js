@@ -32,7 +32,7 @@ export default function Subsidiary() {
         <table className={styles.table}>
           <thead className={styles.tableHeader}>
             <tr>
-              <th>ID</th>
+              <th>#</th>
               <th>Fecha</th>
               <th>Estado</th>
               <th>Acciones</th>
