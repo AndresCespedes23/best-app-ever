@@ -3,8 +3,18 @@ import styles from "../../../../styles/sucursal.module.css";
 import ReturnArrow from "@/Components/ReturnArrow";
 import sucursal from "../../../../../public/images/store/delivery/sucursal.png";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { ENVIOS_STATUS } from "@/constants/envios";
 
 export default function Subsidiary() {
+  const [users, setUsers] = useState();
+
+  useEffect(() => {
+    fetch("/api/entidades/usuarios")
+      .then((res) => res.json())
+      .then(setUsers);
+  }, []);
+  console.log(users);
   return (
     <>
       <Head>
@@ -28,14 +38,28 @@ export default function Subsidiary() {
               <th>Acciones</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td className={styles.tableContent}>Body content 1</td>
-              <td className={styles.tableContent}>Body content 2</td>
-              <td className={styles.tableContent}>Body content 3</td>
-              <td className={styles.tableContent}>Body content 4</td>
-            </tr>
-          </tbody>
+
+          {users?.map((user, index) => {
+            return (
+              <tbody key={index}>
+                {user.envios?.map((envio, index) => {
+                  if (envio.tipo_envio === ENVIOS_STATUS.SUCURSAL)
+                    return (
+                      <tr key={index}>
+                        <td className={styles.tableContent}>
+                          {envio.id_envio}
+                        </td>
+                        <td className={styles.tableContent}>{envio.fecha}</td>
+                        <td className={styles.tableContent}>
+                          {envio.estado_envio}
+                        </td>
+                        <td className={styles.tableContent}></td>
+                      </tr>
+                    );
+                })}
+              </tbody>
+            );
+          })}
         </table>
       </div>
     </>
