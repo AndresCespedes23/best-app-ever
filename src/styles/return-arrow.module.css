@@ -4,6 +4,7 @@
     align-items: center;
 }
 .arrowText {
+    padding-left: 0.5vw;
     text-decoration: none;
     color: black;
 }
