@@ -33,20 +33,20 @@
 .tableDataPendiente {
     padding: 8px;
     border: 1px solid #ddd;
-    color: var(--red);
+    background-color: var(--red);
 }
 .tableDataDespachado {
     padding: 8px;
     border: 1px solid #ddd;
-    color: var(--orange);
+    background-color: var(--orange);
 }
 .tableDataRetirar, .tableDataEnCamino {
     padding: 8px;
     border: 1px solid #ddd;
-    color: var(--yellow);
+    background-color: var(--yellow);
 }
 .tableDataEntregado {
     padding: 8px;
     border: 1px solid #ddd;
-    color: var(--green);
+    background-color: var(--green);
 }
