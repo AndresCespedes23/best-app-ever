@@ -31,3 +31,24 @@
 }
 .tableRow:hover {background-color: #ddd;}
 
+.tableDataPendiente {
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: var(--red);
+}
+.tableDataDespachado {
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: var(--orange);
+}
+.tableDataRetirar, .tableDataEnCamino {
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: var(--yellow);
+}
+.tableDataEntregado {
+    padding: 8px;
+    border: 1px solid #ddd;
+    color: var(--green);
+}
+

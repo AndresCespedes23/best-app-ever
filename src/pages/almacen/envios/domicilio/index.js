@@ -4,6 +4,7 @@ import ReturnArrow from "@/Components/ReturnArrow";
 import domicilio from "../../../../../public/images/store/delivery/domicilio.png";
 import styles from "../../../../styles/residence.module.css";
 import { useEffect, useState } from "react";
+import { ENVIOS } from "@/constants/envios";
 import { ENVIOS_STATUS } from "@/constants/envios";
 
 export default function Residence() {
@@ -23,6 +24,7 @@ export default function Residence() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <ReturnArrow href="/almacen/envios" />
 
       <figure className={styles.residence}>
@@ -45,14 +47,46 @@ export default function Residence() {
             return (
               <tbody key={index}>
                 {user.envios?.map((envio, index) => {
-                  if (envio.tipo_envio === ENVIOS_STATUS.DOMICILIO)
+                  if (envio.tipo_envio === ENVIOS.DOMICILIO)
                     return (
                       <tr className={styles.tableRow} key={index}>
                         <td className={styles.tableData}>{envio.id_envio}</td>
                         <td className={styles.tableData}>{envio.fecha}</td>
-                        <td className={styles.tableData}>
-                          {envio.estado_envio}
-                        </td>
+                        {(() => {
+                          switch (envio.estado_envio) {
+                            case ENVIOS_STATUS.DESPACHADO:
+                              return (
+                                <td className={styles.tableDataDespachado}>
+                                  {envio.estado_envio}
+                                </td>
+                              );
+                            case ENVIOS_STATUS.RETIRAR:
+                              return (
+                                <td className={styles.tableDataRetirar}>
+                                  {envio.estado_envio}
+                                </td>
+                              );
+                            case ENVIOS_STATUS.EN_CAMINO:
+                              return (
+                                <td className={styles.tableDataEnCamino}>
+                                  {envio.estado_envio}
+                                </td>
+                              );
+                            case ENVIOS_STATUS.ENTREGADO:
+                              return (
+                                <td className={styles.tableDataEntregado}>
+                                  {envio.estado_envio}
+                                </td>
+                              );
+                            default:
+                              ENVIOS_STATUS.PENDIENTE;
+                              return (
+                                <td className={styles.tableDataPendiente}>
+                                  {envio.estado_envio}
+                                </td>
+                              );
+                          }
+                        })()}
                         <td className={styles.tableData}></td>
                       </tr>
                     );
