@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ENVIOS } from "@/constants/envios";
 import { ENVIOS_STATUS } from "@/constants/envios";
+import Link from "next/link";
 
 export default function Subsidiary() {
   const [users, setUsers] = useState();
@@ -86,12 +87,14 @@ export default function Subsidiary() {
                           }
                         })()}
                         <td className={styles.tableData}>
-                          <Image
-                            height={32}
-                            width={32}
-                            src={lupa}
-                            alt="detalles"
-                          />
+                          <Link href={`sucursal/${envio.id_envio}`}>
+                            <Image
+                              height={32}
+                              width={32}
+                              src={lupa}
+                              alt="detalles"
+                            />
+                          </Link>
                         </td>
                       </tr>
                     );
