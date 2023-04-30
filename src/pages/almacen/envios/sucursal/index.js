@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../../../../styles/sucursal.module.css";
 import ReturnArrow from "@/Components/ReturnArrow";
 import sucursal from "../../../../../public/images/store/delivery/sucursal.png";
+import lupa from "../../../../../public/images/store/lupa.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ENVIOS } from "@/constants/envios";
@@ -36,7 +37,7 @@ export default function Subsidiary() {
               <th className={styles.tableHeader}>#</th>
               <th className={styles.tableHeader}>Fecha</th>
               <th className={styles.tableHeader}>Estado</th>
-              <th className={styles.tableHeader}>Acciones</th>
+              <th className={styles.tableHeader}>Detalles</th>
             </tr>
           </thead>
 
@@ -84,7 +85,14 @@ export default function Subsidiary() {
                               );
                           }
                         })()}
-                        <td className={styles.tableData}></td>
+                        <td className={styles.tableData}>
+                          <Image
+                            height={32}
+                            width={32}
+                            src={lupa}
+                            alt="detalles"
+                          />
+                        </td>
                       </tr>
                     );
                 })}
