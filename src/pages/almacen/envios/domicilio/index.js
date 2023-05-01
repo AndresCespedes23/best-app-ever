@@ -8,9 +8,12 @@ import { useEffect, useState } from "react";
 import { ENVIOS } from "@/constants/envios";
 import { ENVIOS_STATUS } from "@/constants/envios";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Residence() {
   const [users, setUsers] = useState();
+  const router = useRouter();
+  const { id } = router.query;
 
   useEffect(() => {
     fetch("/api/entidades/usuarios")
@@ -18,6 +21,7 @@ export default function Residence() {
       .then(setUsers);
   }, []);
   console.log(users);
+
   return (
     <>
       <Head>
@@ -90,7 +94,7 @@ export default function Residence() {
                           }
                         })()}
                         <td className={styles.tableData}>
-                          <Link href={`sucursal/${envio.id_envio}`}>
+                          <Link href={`domicilio/${envio.id_envio}`}>
                             <Image
                               height={32}
                               width={32}

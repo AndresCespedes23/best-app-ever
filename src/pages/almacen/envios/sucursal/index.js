@@ -87,7 +87,7 @@ export default function Subsidiary() {
                           }
                         })()}
                         <td className={styles.tableData}>
-                          <Link href={`sucursal/${id}`}>
+                          <Link href={`sucursal/${envio.id_envio}`}>
                             <Image
                               height={32}
                               width={32}
