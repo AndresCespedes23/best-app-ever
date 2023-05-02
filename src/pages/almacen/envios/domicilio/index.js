@@ -8,12 +8,9 @@ import { useEffect, useState } from "react";
 import { ENVIOS } from "@/constants/envios";
 import { ENVIOS_STATUS } from "@/constants/envios";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function Residence() {
   const [users, setUsers] = useState();
-  const router = useRouter();
-  const { id } = router.query;
 
   useEffect(() => {
     fetch("/api/entidades/usuarios")
