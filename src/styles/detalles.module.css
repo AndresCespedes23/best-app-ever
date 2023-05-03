@@ -1,0 +1,12 @@
+.detallesContainer{
+    margin: 1rem 5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    border: 1px solid #c4c0c0;
+    border-radius: 9px;
+}
+.detallesContainer p {
+    padding: 0.5rem;
+    border-bottom: 1px solid #c4c0c0;
+}
