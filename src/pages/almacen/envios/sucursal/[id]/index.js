@@ -2,6 +2,7 @@ import ReturnArrow from "@/Components/ReturnArrow";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "@/styles/detalles.module.css";
+import { ENVIOS_STATUS } from "@/constants/envios";
 
 export default function Detalles() {
   const router = useRouter();
@@ -14,7 +15,6 @@ export default function Detalles() {
       .then((res) => res.json())
       .then(setUsers);
   }, []);
-
   return (
     <>
       <ReturnArrow href="/almacen/envios/sucursal" />
@@ -31,6 +31,45 @@ export default function Detalles() {
                     <p>Horario: {envio.rango_horario}</p>
                     <p>Total: ${envio.total}</p>
                     <p>Forma de pago: {envio.forma_pago}</p>
+
+                    <div className={styles.btnsContainer}>
+                      <button
+                        className={
+                          envio.estado_envio === ENVIOS_STATUS.PENDIENTE
+                            ? styles.envioPendiente
+                            : styles.deliveryBtn
+                        }
+                      >
+                        Pendiente
+                      </button>
+                      <button
+                        className={
+                          ENVIOS_STATUS.DESPACHADO === envio.estado_envio
+                            ? styles.envioDespachado
+                            : styles.deliveryBtn
+                        }
+                      >
+                        Despachado
+                      </button>
+                      <button
+                        className={
+                          ENVIOS_STATUS.RETIRAR === envio.estado_envio
+                            ? styles.retirarEnvio
+                            : styles.deliveryBtn
+                        }
+                      >
+                        Retirar
+                      </button>
+                      <button
+                        className={
+                          ENVIOS_STATUS.ENTREGADO === envio.estado_envio
+                            ? styles.envioEntregado
+                            : styles.deliveryBtn
+                        }
+                      >
+                        Entregado
+                      </button>
+                    </div>
                   </div>
                 );
             })}

@@ -69,7 +69,7 @@ const usuarios = [
           },
         ],
         tipo_envio: "sucursal",
-        estado_envio: "en camino",
+        estado_envio: "retirar",
         rango_horario: "14:43:55",
         forma_pago: "efectivo",
         total: 27400,

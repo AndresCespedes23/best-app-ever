@@ -10,3 +10,52 @@
     padding: 0.5rem;
     border-bottom: 1px solid #c4c0c0;
 }
+.btnsContainer{
+    display: flex;
+    justify-content: center;
+}
+.deliveryBtn {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #FFF;
+    border: 1px solid #c4c0c0;
+    border-radius: 9999px;
+    box-shadow: 2px 3px #0000001c;
+    cursor: pointer;
+}
+.envioPendiente {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #c4c0c0;
+    border-radius: 9999px;
+    box-shadow: 2px 3px #0000001c;
+    cursor: pointer;
+    background-color: var(--red);
+}
+.envioDespachado {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #c4c0c0;
+    border-radius: 9999px;
+    box-shadow: 2px 3px #0000001c;
+    cursor: pointer;
+    background-color: var(--orange);
+}
+.retirarEnvio {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #c4c0c0;
+    border-radius: 9999px;
+    box-shadow: 2px 3px #0000001c;
+    cursor: pointer;
+    background-color: var(--yellow);
+}
+.envioEntregado {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #c4c0c0;
+    border-radius: 9999px;
+    box-shadow: 2px 3px #0000001c;
+    cursor: pointer;
+    background-color: var(--green);
+}
