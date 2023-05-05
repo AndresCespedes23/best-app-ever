@@ -1,6 +1,8 @@
 import ReturnArrow from "@/Components/ReturnArrow";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import styles from "@/styles/detalles.module.css";
+import { ENVIOS_STATUS } from "@/constants/envios";
 export default function Detalles() {
   const router = useRouter();
   const { id } = router.query;
@@ -22,10 +24,52 @@ export default function Detalles() {
             {user.envios?.map((envio, index) => {
               if (envio.id_envio === id)
                 return (
-                  <div key={index}>
-                    <p>{envio.id_envio}</p>
-                    <p>{envio.fecha}</p>
-                    <p></p>
+                  <div className={styles.detallesContainer} key={index}>
+                    <p>N° de envio: {envio.id_envio}</p>
+                    <p>Nombre:</p>
+                    <p>Dirección de envío:</p>
+                    <p>Horario: {envio.rango_horario}</p>
+                    <p>Total: ${envio.total}</p>
+                    <p>Forma de pago: {envio.forma_pago}</p>
+
+                    <div className={styles.btnsContainer}>
+                      <button
+                        className={
+                          envio.estado_envio === ENVIOS_STATUS.PENDIENTE
+                            ? styles.envioPendiente
+                            : styles.deliveryBtn
+                        }
+                      >
+                        Pendiente
+                      </button>
+                      <button
+                        className={
+                          ENVIOS_STATUS.DESPACHADO === envio.estado_envio
+                            ? styles.envioDespachado
+                            : styles.deliveryBtn
+                        }
+                      >
+                        Despachado
+                      </button>
+                      <button
+                        className={
+                          ENVIOS_STATUS.EN_CAMINO === envio.estado_envio
+                            ? styles.envioEnCamino
+                            : styles.deliveryBtn
+                        }
+                      >
+                        En Camino
+                      </button>
+                      <button
+                        className={
+                          ENVIOS_STATUS.ENTREGADO === envio.estado_envio
+                            ? styles.envioEntregado
+                            : styles.deliveryBtn
+                        }
+                      >
+                        Entregado
+                      </button>
+                    </div>
                   </div>
                 );
             })}
