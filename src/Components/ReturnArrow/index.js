@@ -1,7 +1,7 @@
 import Link from "next/link";
 import arrow from "../../../public/images/store/retornar.png";
 import Image from "next/image";
-import styles from "../../styles/return-arrow.module.css";
+import styles from "../../styles/volver.module.css";
 export default function ReturnArrow({ href }) {
   return (
     <div className={styles.arrow}>

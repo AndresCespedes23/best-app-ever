@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import delivery from "../../../public/images/store/entrega.png";
 import grocery from "../../../public/images/store/compras.png";
-import styles from "../../styles/store.module.css";
+import styles from "../../styles/almacen.module.css";
 import Link from "next/link";
 
 export default function Store() {

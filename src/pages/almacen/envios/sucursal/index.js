@@ -9,7 +9,7 @@ import { ENVIOS } from "@/constants/envios";
 import { ENVIOS_STATUS } from "@/constants/envios";
 import Link from "next/link";
 
-export default function Subsidiary() {
+export default function Sucursal() {
   const [users, setUsers] = useState();
 
   useEffect(() => {

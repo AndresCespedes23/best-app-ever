@@ -3,13 +3,13 @@ import Image from "next/image";
 import ReturnArrow from "@/Components/ReturnArrow";
 import domicilio from "../../../../../public/images/store/delivery/domicilio.png";
 import lupa from "../../../../../public/images/store/lupa.png";
-import styles from "../../../../styles/residence.module.css";
+import styles from "../../../../styles/domicilio.module.css";
 import { useEffect, useState } from "react";
 import { ENVIOS } from "@/constants/envios";
 import { ENVIOS_STATUS } from "@/constants/envios";
 import Link from "next/link";
 
-export default function Residence() {
+export default function Domicilio() {
   const [users, setUsers] = useState();
 
   useEffect(() => {

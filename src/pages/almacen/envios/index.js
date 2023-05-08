@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "../../../styles/delivery.module.css";
+import styles from "../../../styles/envios.module.css";
 import domicilio from "../../../../public/images/store/delivery/domicilio.png";
 import sucursal from "../../../../public/images/store/delivery/sucursal.png";
 
-export default function Delivery() {
+export default function Envios() {
   return (
     <>
       <Head>
