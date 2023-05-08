@@ -1,0 +1,24 @@
+.title {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.deliveryBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.residenceBtn, .subsidiaryBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 2rem;
+    border: 1px solid #c4c0c0;
+    border-radius: 9px;
+    box-shadow: 2px 3px 3px #c4c0c0;
+    color: #000;
+    text-decoration: none;
+}

@@ -85,6 +85,10 @@ video {
   font-size: 100%;
   font-family: 'Varela Round', sans-serif;
   vertical-align: baseline;
+  --red: #DB1515;
+  --orange:#D38510;
+  --yellow:#DBC715;
+  --green:#19DB15;
 }
 
 /* HTML5 display-role reset for older browsers */

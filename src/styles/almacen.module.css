@@ -1,0 +1,29 @@
+.title {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.storeBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.delivery, .grocery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    border: 1px solid #c4c0c0;
+    border-radius: 9px;
+    box-shadow: 2px 3px 3px #c4c0c0;
+    color: #000;
+    text-decoration: none;
+}
+.delivery {
+    padding: 2rem 2.5rem;
+}
+.grocery {
+    padding: 2rem;
+}

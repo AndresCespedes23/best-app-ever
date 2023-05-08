@@ -1,0 +1,52 @@
+.residence {
+    margin:1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.deliveryInfo {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.table{
+    border-collapse: separate;
+    width: 100%;
+}
+.tableHeader {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #a0a0a0;
+    color: white;
+}
+.tableHeader, .tableData {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+.tableRow:hover {background-color: #ddd;}
+
+.tableDataPendiente {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: var(--red);
+}
+.tableDataDespachado {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: var(--orange);
+}
+.tableDataRetirar, .tableDataEnCamino {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: var(--yellow);
+}
+.tableDataEntregado {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: var(--green);
+}
