@@ -1,5 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import styles from "../../../styles/productos.module.css";
+import carne from "../../../../public/images/store/carne.jpg";
+import Image from "next/image";
+import ProductsPhotoContainer from "@/Components/ProductsPhotoContainer";
 
 export default function Grocery() {
   return (
@@ -10,7 +14,13 @@ export default function Grocery() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className={styles.productos}>productos</h1>
+      <h1 className={styles.productos}>Productos</h1>
+      <div className={styles.categoriasProductos}>
+        <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
+        <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
+        <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
+        <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
+      </div>
     </>
   );
 }
