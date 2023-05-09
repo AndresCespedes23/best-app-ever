@@ -2,7 +2,9 @@
 import Head from "next/head";
 import styles from "../../../styles/productos.module.css";
 import carne from "../../../../public/images/store/carne.jpg";
-import Image from "next/image";
+import alcohol from "../../../../public/images/store/bl.jpg";
+import coca from "../../../../public/images/store/coca.jpg";
+import verdu from "../../../../public/images/store/verdu.jpg";
 import ProductsPhotoContainer from "@/Components/ProductsPhotoContainer";
 
 export default function Grocery() {
@@ -17,9 +19,21 @@ export default function Grocery() {
       <h1 className={styles.productos}>Productos</h1>
       <div className={styles.categoriasProductos}>
         <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
-        <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
-        <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
-        <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
+        <ProductsPhotoContainer
+          src={coca}
+          alt="bebidas-sin-alcohol"
+          text="Bebidas sin alcohol"
+        />
+        <ProductsPhotoContainer
+          src={alcohol}
+          alt="bebidas-alcoholicas"
+          text="Bebidas alcoholicas"
+        />
+        <ProductsPhotoContainer
+          src={verdu}
+          alt="verduleria"
+          text="Frutas y verduras"
+        />
       </div>
     </>
   );
