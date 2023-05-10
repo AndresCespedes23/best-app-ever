@@ -6,8 +6,9 @@ import alcohol from "../../../../public/images/store/bl.jpg";
 import coca from "../../../../public/images/store/coca.jpg";
 import verdu from "../../../../public/images/store/verdu.jpg";
 import ProductsPhotoContainer from "@/Components/ProductsPhotoContainer";
+import Link from "next/link";
 
-export default function Grocery() {
+export default function Productos() {
   return (
     <>
       <Head>
@@ -18,22 +19,33 @@ export default function Grocery() {
       </Head>
       <h1 className={styles.productos}>Productos</h1>
       <div className={styles.categoriasProductos}>
-        <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
-        <ProductsPhotoContainer
-          src={coca}
-          alt="bebidas-sin-alcohol"
-          text="Bebidas sin alcohol"
-        />
-        <ProductsPhotoContainer
-          src={alcohol}
-          alt="bebidas-alcoholicas"
-          text="Bebidas alcoholicas"
-        />
-        <ProductsPhotoContainer
-          src={verdu}
-          alt="verduleria"
-          text="Frutas y verduras"
-        />
+        <Link href="productos/carnes">
+          <ProductsPhotoContainer src={carne} alt="carniceria" text="Carnes" />
+        </Link>
+
+        <Link href="productos/bebidas-sin-alcohol">
+          <ProductsPhotoContainer
+            src={coca}
+            alt="bebidas-sin-alcohol"
+            text="Bebidas sin alcohol"
+          />
+        </Link>
+
+        <Link href="productos/bebidas-alcoholicas">
+          <ProductsPhotoContainer
+            src={alcohol}
+            alt="bebidas-alcoholicas"
+            text="Bebidas alcoholicas"
+          />
+        </Link>
+
+        <Link href="productos/frutas-y-verduras">
+          <ProductsPhotoContainer
+            src={verdu}
+            alt="verduleria"
+            text="Frutas y verduras"
+          />
+        </Link>
       </div>
     </>
   );
