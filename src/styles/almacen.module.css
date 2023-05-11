@@ -27,3 +27,6 @@
 .grocery {
     padding: 2rem;
 }
+.delivery:hover, .grocery:hover {
+    opacity: .7;
+}

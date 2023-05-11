@@ -14,34 +14,37 @@ export default function BebidasAlcoholicas() {
       <ReturnArrow href="/almacen/productos/" />
       <h1 className={styles.bebidasAlcoholicasTitulo}>Bebidas Alcohólicas</h1>
       <div className={styles.subcategoriesGrid}>
-        <Link href="bebidas-alcoholicas/vinos">
+        <Link className={styles.navLinks} href="bebidas-alcoholicas/vinos">
           <SubcategoriesContainer src={vinos} alt="Vinos" text="Vinos" />
         </Link>
-        <Link href="bebidas-alcoholicas/cervezas">
+        <Link className={styles.navLinks} href="bebidas-alcoholicas/cervezas">
           <SubcategoriesContainer src={cerveza} alt="Cerveza" text="Cerveza" />
         </Link>
-        <Link href="bebidas-alcoholicas/whiskies">
+        <Link className={styles.navLinks} href="bebidas-alcoholicas/whiskies">
           <SubcategoriesContainer
             src={whiskies}
             alt="Whiskies"
             text="Whiskies"
           />
         </Link>
-        <Link href="bebidas-alcoholicas/espumantes">
+        <Link className={styles.navLinks} href="bebidas-alcoholicas/espumantes">
           <SubcategoriesContainer
             src={espumantes}
             alt="Espumantes"
             text="Espumantes"
           />
         </Link>
-        <Link href="bebidas-alcoholicas/aperitivos">
+        <Link className={styles.navLinks} href="bebidas-alcoholicas/aperitivos">
           <SubcategoriesContainer
             src={aperitivos}
             alt="Aperitivos"
             text="Aperitivos"
           />
         </Link>
-        <Link href="bebidas-alcoholicas/bebidas-blancas">
+        <Link
+          className={styles.navLinks}
+          href="bebidas-alcoholicas/bebidas-blancas"
+        >
           <SubcategoriesContainer
             src={vodka}
             alt="Bebidas Blancas"

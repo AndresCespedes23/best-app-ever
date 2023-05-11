@@ -4,20 +4,21 @@
     justify-content: center;
     align-items: flex-end;
 }
+
 .subcategoriaFoto {
     border-radius: 9px;
     cursor: pointer;
 }
-.subcategoriaFoto:hover {
-    box-shadow: 5px 5px 3px #c4c0c0;
-}
 .pieSubcategorias{
-    position: absolute;
+    position: relative;
     margin-bottom: 1vh;
     padding: 5px;
     display: flex;
     justify-content: center;
     border-radius: 9px;
     color: #FFF;
-    background-color: #000000b2;
+    background-color: #000000;
+}
+.imgCursorEffect:hover {
+    opacity: .7;
 }
