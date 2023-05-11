@@ -14,7 +14,7 @@ export default function WorkInProgress({ href }) {
         <Image className={styles.gif} src={wip} alt="work-in-progress" />
       </div>
       <Link className={styles.btnLink} href={href}>
-        <button className={styles.wipBtn}>Por favor, vuelva atrás</button>
+        <button className={styles.wipBtn}>Por favor, vuelva más tarde</button>
       </Link>
     </section>
   );
