@@ -7,6 +7,7 @@ import coca from "../../../../public/images/store/coca.jpg";
 import verdu from "../../../../public/images/store/verdu.jpg";
 import ProductsPhotoContainer from "@/Components/ProductsPhotoContainer";
 import Link from "next/link";
+import ReturnArrow from "@/Components/ReturnArrow";
 
 export default function Productos() {
   return (
@@ -17,6 +18,7 @@ export default function Productos() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ReturnArrow href="/almacen" />
       <h1 className={styles.productos}>Productos</h1>
       <div className={styles.categoriasProductos}>
         <Link href="productos/carnes">

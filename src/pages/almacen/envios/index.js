@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../../../styles/envios.module.css";
 import domicilio from "../../../../public/images/store/delivery/domicilio.png";
 import sucursal from "../../../../public/images/store/delivery/sucursal.png";
+import ReturnArrow from "@/Components/ReturnArrow";
 
 export default function Envios() {
   return (
@@ -14,6 +15,7 @@ export default function Envios() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ReturnArrow href="/almacen" />
       <h1 className={styles.title}>Envíos</h1>
       <div className={styles.deliveryBtns}>
         <Link className={styles.residenceBtn} href="/almacen/envios/domicilio">
