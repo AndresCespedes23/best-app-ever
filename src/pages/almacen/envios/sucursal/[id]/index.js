@@ -26,8 +26,10 @@ export default function Detalles() {
                 return (
                   <div className={styles.detallesContainer} key={index}>
                     <p>N° de envio: {envio.id_envio}</p>
-                    <p>Nombre:</p>
-                    <p>Dirección de envío:</p>
+                    <p>
+                      Nombre: {user.nombre} {user.apellido}
+                    </p>
+                    <p>Dirección de envío: {user.domicilio.direccion}</p>
                     <p>Horario: {envio.rango_horario}</p>
                     <p>Total: ${envio.total}</p>
                     <p>Forma de pago: {envio.forma_pago}</p>
