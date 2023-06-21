@@ -34,6 +34,7 @@ export default function LoginForm() {
   return (
     <form onSubmit={handleSubmit}>
       <input
+      
         type="text"
         placeholder="Full Name"
         value={fullName}
