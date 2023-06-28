@@ -1,4 +1,6 @@
+import LoginForm from "@/Components/Login/LoginForm";
 import Head from "next/head";
+
 
 export default function Home() {
   return (
@@ -11,6 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <h1>Best App Ever Developed</h1>
+        <LoginForm/>
       </main>
     </>
   );
